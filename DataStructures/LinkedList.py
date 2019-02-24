@@ -44,20 +44,20 @@ class LinkedList:
     def getNode(self, index):
         retVal = self.head
         for i in range(0, index):
-            retVal = retVal.right            
+            retVal = retVal.getRight()            
         return retVal
     
     def getData(self, index):
         retVal = self.head
         for i in range(0, index):
-            retVal = retVal.right            
+            retVal = retVal.getRight()            
         return retVal.getData()
     
     def addNode(self, data):
         n = Node(data)
         tail = self.head
-        while tail.right:
-            tail = tail.getRight
+        while tail.getRight():
+            tail = tail.getRight()
         else:
             n.setLeft(tail)
             tail.setRight(n)
